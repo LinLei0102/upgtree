@@ -1,0 +1,67 @@
+/* 词条 part 12 — 补漏：canvas 底板标题（DECORATIONS 的 text）+ 信息节点的 getInfoText
+ * 这两类是上一轮漏掉的：前者在 `{ type:'text', text: '...' }` 里，不是节点行；
+ * 后者是 getInfoText 的模板字面量，都被提取器漏扫了。现已纳入 tools/extract-strings.mjs。
+ */
+Object.assign(window.__I18N_DICTS__['zh-CN'], {
+
+    /* ==== 底板标题（画在 canvas 上的大字）==== */
+    // 288px 的背景大字属于图形元素，玩家要求保留原文（译名和原文一样 = 引擎视为未改动）
+    "XP/L": "XP/L",
+    "AUTO": "自动",
+    "The start of everything.": "一切的起点。",
+    "Your first reset layer.": "你的第一个重置层。",
+    "Point baseplate": "点数底板",
+    "Point baseplate: extension": "点数底板：扩展",
+    "Automation baseplate": "自动化底板",
+    "Automation++ baseplate": "自动化++ 底板",
+    "Automation+ baseplate": "自动化+ 底板",
+    "Cash baseplate": "现金底板",
+    "Beta baseplate": "Beta 底板",
+    "Cookie baseplate": "曲奇底板",
+    "Token baseplate": "代币底板",
+    "Clip baseplate": "筹码底板",
+    "Research baseplate": "研究底板",
+    "Energy baseplate": "能量底板",
+    "Decoration baseplate": "装饰底板",
+    "Tree baseplate": "树底板",
+    "Tree+ baseplate": "树+ 底板",
+    "Tree++ baseplate": "树++ 底板",
+    "Prestige baseplate": "声望底板",
+    "Ascension baseplate": "飞升底板",
+    "Dimension baseplate": "维度底板",
+    "Dimension baseplate II": "维度底板 II",
+    "Dimension baseplate III": "维度底板 III",
+    "plate plate": "底板·底板",
+    "Mining plate": "挖矿底板",
+    "Mining plate II": "挖矿底板 II",
+    "Mining plate III": "挖矿底板 III",
+    "Mining plate IV": "挖矿底板 IV",
+    "Finale I": "终局 I",
+    "Uni II start": "宇宙 II 起点",
+    "Business": "生意",
+    "Business II": "生意 II",
+    "Business III": "生意 III",
+    "Progression baseplate": "进度底板",
+    "Reset all your progress again!": "再把你的进度全部重置一次！",
+    "Operation baseplate": "运算底板",
+    "Experience baseplate": "经验底板",
+    "Frog baseplate": "青蛙底板",
+    "Random baseplate": "随机底板",
+    "Data baseplate I": "数据底板 I",
+    "Grey baseplate": "灰色底板",
+    "Cyan baseplate": "青色底板",
+    "Yellow baseplate": "黄色底板",
+    "Topaz baseplate": "黄玉底板",
+    "Day/night baseplate": "昼/夜底板",
+    "Weather baseplate": "天气底板",
+
+    /* ==== 信息节点的动态提示 ==== */
+    "Consider changing autobuy to 1 to avoid accidentally buying muitiple resc.upgs!": "建议把自动购买设为 1，避免误买多个研究升级！",
+    "Recommond first reset amount: 1": "建议首次重置量：1",
+    "There is many upgrades in this plate/section.Note: does not reset on ascension- layers.": "这块底板/区域里有很多升级。注意：飞升层不会重置它。",
+    "Note that this part of the game does not boost main progress!": "注意：这部分游戏不会增幅主线进度！",
+    "Note that this part of the game is intentionally more timewally, and active!": "注意：这部分是故意设计得更拖时间、更需要手动操作的！",
+    "For upgrades I.xx, you only pay for the last level!": "对于 I.xx 系列升级，你只需为最后一级付钱！",
+    "(per 10 xp -> 1 level, capped at 5 per conversion)": "（每 10 经验 → 1 级，单次转换上限 5）",
+
+});

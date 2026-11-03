@@ -1,0 +1,14 @@
+# 本地离线运行库：只用于本机测试，不入库（发布版 zh.html 走 CDN）
+vendor/
+
+# 本地离线版产物：由 build-zh.mjs 生成，不入库
+zh-offline.html
+
+# 漏译清单 / 新闻抽取 / 测试截图：临时产物
+tools/_*.json
+tools/_*.png
+
+# 依赖
+node_modules/
+
+# 注：zh.html 是发布版（走 CDN），需要提交，不要忽略
