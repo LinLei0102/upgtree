@@ -525,7 +525,7 @@ const OFFLINE_EXCLUDED_CURRENCIES = new Set([
             { coords: [[1.25, 2.5], [2.5, 3]], thickness: 6, color: 'lightblue', opacity: 0.2, requirements: ['D14'], type: 'line' },
             { type: 'rect', coords: [-2.5, -2.5], width: 800, height: 800, fillColor: 'green', fillOpacity: 0.3, strokeColor: '#34d399', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['#1'] },
             { type: 'rect', coords: [-7.5, -2.5], width: 800, height: 800, fillColor: 'green', fillOpacity: 0.3, strokeColor: '#34d399', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['P11'] },
-            { type: 'rect', coords: [-7.5, -7.5], width: 800, height: 800, fillColor: '#06402B', fillOpacity: 0.3, strokeColor: '#34d399', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['B12'] },
+            { type: 'rect', coords: [-7.5, -7.5], width: 800, height: 800, fillColor: '#06402B', fillOpacity: 0.3, strokeColor: '#34d399', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+BU2'] },
             { type: 'rect', coords: [2.5, -2.5], width: 800, height: 800, fillColor: '#f9bfbf', fillOpacity: 0.3, strokeColor: '#f9bfbf', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['P05'] },
             { type: 'rect', coords: [7.5, -2.5], width: 800, height: 800, fillColor: '#750d37', fillOpacity: 0.3, strokeColor: '#750d37', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['AU19'] },
             { type: 'rect', coords: [-2.4, -2.4], width: 288, height: 128, fillColor: 'lightgreen', fillOpacity: 0.5, strokeColor: '#34d399', strokeOpacity: 0.9, strokeWidth: 0, requirements: ['D8'] },
@@ -534,8 +534,8 @@ const OFFLINE_EXCLUDED_CURRENCIES = new Set([
             { type: 'rect', coords: [-7.5, -12.5], width: 800, height: 800, fillColor: '#bb8855', fillOpacity: 0.3, strokeColor: '#bb8855', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+B14'] },
             { type: 'rect', coords: [-2.5, 2.5], width: 800, height: 800, fillColor: 'lightblue', fillOpacity: 0.4, strokeColor: 'lightblue', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['R1'] },
             { type: 'rect', coords: [-7.5, 2.5], width: 800, height: 800, fillColor: 'orange', fillOpacity: 0.35, strokeColor: 'lightyellow', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['R7'] },
-            { type: 'rect', coords: [2.5, -7.5], width: 800, height: 800, fillColor: '#d1d0d0', fillOpacity: 0.35, strokeColor: 'lightyellow', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['B01'] },
-            { type: 'rect', coords: [2.5, -12.5], width: 800, height: 800, fillColor: '#ce8946', fillOpacity: 0.35, strokeColor: '#ce8946', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['B01'] },
+            { type: 'rect', coords: [2.5, -7.5], width: 800, height: 800, fillColor: '#d1d0d0', fillOpacity: 0.35, strokeColor: 'lightyellow', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+BU1'] },
+            { type: 'rect', coords: [2.5, -12.5], width: 800, height: 800, fillColor: '#ce8946', fillOpacity: 0.35, strokeColor: '#ce8946', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+BU5'] },
             { type: 'rect', coords: [2.5, -17.5], width: 800, height: 800, fillColor: '#ce8946', fillOpacity: 0.35, strokeColor: '#ce8946', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+BU6'] },
             { type: 'rect', coords: [2.5, 2.5], width: 800, height: 800, fillColor: 'darkorchid', fillOpacity: 0.35, strokeColor: 'purple', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['R12'] },
             { type: 'rect', coords: [7.5, 2.5], width: 800, height: 800, fillColor: '#895129', fillOpacity: 0.35, strokeColor: 'brown', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['A03'] },
@@ -591,12 +591,14 @@ const OFFLINE_EXCLUDED_CURRENCIES = new Set([
             { type: 'text', coords: [2.5, -2.5], text: 'Automation baseplate', alignment: 'Bottom-left', color: '#f9bfbf', fontSize: 28, opacity: 1, requirements: ['P05'] },
             { type: 'text', coords: [7.5, -2.5], text: 'Automation+ baseplate', alignment: 'Bottom-left', color: '#750d37', fontSize: 28, opacity: 1, requirements: ['AU19'] },
             { type: 'text', coords: [-2.5, -7.5], text: 'Bonus baseplate', alignment: 'Bottom-left', color: 'lightgreen', fontSize: 28, opacity: 0.9, requirements: ['B01'] },
-            { type: 'text', coords: [-7.5, -7.5], text: 'Cash baseplate', alignment: 'Bottom-left', color: 'green', fontSize: 28, opacity: 0.9, requirements: ['+B12'] },
+            { type: 'text', coords: [-7.5, -7.5], text: 'Cash baseplate', alignment: 'Bottom-left', color: 'green', fontSize: 28, opacity: 0.9, requirements: ['+BU2'] },
             { type: 'text', coords: [-2.5, -12.5], text: 'Beta baseplate', alignment: 'Bottom-left', color: 'pink', fontSize: 28, opacity: 0.9, requirements: ['+B13'] },
             { type: 'text', coords: [-7.5, -12.5], text: 'Cookie baseplate', alignment: 'Bottom-left', color: 'brown', fontSize: 28, opacity: 0.9, requirements: ['+B14'] },
-            { type: 'text', coords: [2.5, -7.5], text: 'Infinity baseplate', alignment: 'Bottom-left', color: '#d1d0d0', fontSize: 28, opacity: 0.9, requirements: ['+B11'] },
-            { type: 'text', coords: [2.5, -12.5], text: 'Token baseplate', alignment: 'Bottom-left', color: '#ce8946', fontSize: 28, opacity: 0.9, requirements: ['+B15'] },
-            { type: 'text', coords: [2.5, -17.5], text: 'Clip baseplate', alignment: 'Bottom-left', color: '#ce8946', fontSize: 28, opacity: 0.9, requirements: ['+B15'] },
+            { type: 'text', coords: [2.5, -7.5], text: 'Infinity baseplate', alignment: 'Bottom-left', color: '#d1d0d0', fontSize: 28, opacity: 0.9, requirements: ['+BU1'] },
+            { type: 'rect', coords: [7.5, -7.5], width: 800, height: 800, fillColor: '#63f7b4', fillOpacity: 0.35, strokeColor: '#63f7b4', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['+B21'] },
+            { type: 'text', coords: [7.5, -7.5], text: 'Timewall baseplate', alignment: 'Bottom-left', color: '#63f7b4', fontSize: 28, opacity: 0.3, requirements: ['+B21'] },
+            { type: 'text', coords: [2.5, -12.5], text: 'Token baseplate', alignment: 'Bottom-left', color: '#ce8946', fontSize: 28, opacity: 0.9, requirements: ['+BU5'] },
+            { type: 'text', coords: [2.5, -17.5], text: 'Clip baseplate', alignment: 'Bottom-left', color: '#ce8946', fontSize: 28, opacity: 0.9, requirements: ['+BU6'] },
             { type: 'text', coords: [-2.5, 2.5], text: 'Research baseplate', alignment: 'Bottom-left', color: 'lightblue', fontSize: 28, opacity: 0.9, requirements: ['R1'] },
             { type: 'text', coords: [-7.5, 2.5], text: 'Energy baseplate', alignment: 'Bottom-left', color: 'orange', fontSize: 28, opacity: 0.9, requirements: ['R7'] },
             { type: 'text', coords: [2.5, 2.5], text: 'Decoration baseplate', alignment: 'Bottom-left', color: 'purple', fontSize: 28, opacity: 0.9, requirements: ['R12'] },
@@ -642,6 +644,10 @@ const OFFLINE_EXCLUDED_CURRENCIES = new Set([
             { type: 'rect', coords: [42.5, 7.5], width: 800, height: 800, fillColor: '#ACFFFC', fillOpacity: 0.5, strokeColor: '#ACFFFC', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['CGR02'] },
             { type: 'text', coords: [42.5, -2.5], text: 'Yellow baseplate', alignment: 'Bottom-left', color: '#FFF9AE', fontSize: 28, opacity: 0.3, requirements: ['CGR09'] },
             { type: 'rect', coords: [42.5, -2.5], width: 800, height: 800, fillColor: '#FFF9AE', fillOpacity: 0.5, strokeColor: '#FFF9AE', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['CGR09'] },
+            { type: 'text', coords: [47.5, 2.5], text: 'Magenta baseplate', alignment: 'Bottom-left', color: '#FF80FF', fontSize: 28, opacity: 0.3, requirements: ['CGR16'] },
+            { type: 'rect', coords: [47.5, 2.5], width: 800, height: 800, fillColor: '#FF80FF', fillOpacity: 0.5, strokeColor: '#FF80FF', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['CGR16'] },
+            { type: 'text', coords: [47.5, -2.5], text: 'Mana baseplate', alignment: 'Bottom-left', color: '#D952D9', fontSize: 28, opacity: 0.3, requirements: ['CM04'] },
+            { type: 'rect', coords: [47.5, -2.5], width: 800, height: 800, fillColor: '#D952D9', fillOpacity: 0.5, strokeColor: '#D952D9', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['CM04'] },
             { type: 'text', coords: [37.5, -2.5], text: 'Topaz baseplate', alignment: 'Bottom-left', color: '#FFD700', fontSize: 28, opacity: 0.3, requirements: ['CGR09'] },
             { type: 'rect', coords: [37.5, -2.5], width: 800, height: 800, fillColor: '#FFD700', fillOpacity: 0.5, strokeColor: '#FFD700', strokeOpacity: 0.9, strokeWidth: 2, requirements: ['CGR09'] },
             { type: 'text', coords: [2.5, -27.5], text: 'Day/night baseplate', alignment: 'Bottom-left', color: '#808080', fontSize: 28, opacity: 0.9, requirements: ['+BU10'] },
@@ -1161,6 +1167,7 @@ function updateChallengeOverlay() {
             XP: { id: 'XP', name: 'Experience', color: 'text-grey-400', fillBg: 'rgba(128,128,128,0.25)' }, 
             L: { id: 'L', name: 'Levels', color: 'text-grey-400', fillBg: 'rgba(128,128,128,0.25)' }, 
             α: { id: 'α', name: 'Alpha', color: 'text-emerald-400', fillBg: 'rgba(34,197,94,0.18)' }, 
+            Ω: { id: 'Ω', name: 'Omega', color: 'text-[#63f7b4]', fillBg: 'rgba(99,247,180,0.18)' },
             β: { id: 'β', name: 'Beta', color: 'text-red-400', fillBg: 'rgba(34,197,94,0.18)' }, 
             Cookie: { id: 'cookie', name: 'Cookie', color: 'text-[#bb8855]', fillBg: 'rgba(210,105,30,0.18)' }, 
             tokens: { id: 'tokens', name: 'Tokens', color: 'text-[#ce8946]', fillBg: 'rgba(206,137,70,0.25)' }, 
@@ -1187,6 +1194,8 @@ function updateChallengeOverlay() {
         maroon: { id: 'maroon', name: 'Maroon', color: 'text-red-800', fillBg: 'rgba(128, 0, 0, 0.2)' },
         burgundy: { id: 'burgundy', name: 'Burgundy', color: 'text-red-950', fillBg: 'rgba(74, 4, 4, 0.2)' },
         yellow: { id: 'yellow', name: 'Yellow', color: 'text-[#FFF9AE]', fillBg: 'rgba(255,249,174,0.2)' },
+        magenta: { id: 'magenta', name: 'Magenta', color: 'text-[#FF80FF]', fillBg: 'rgba(255,128,255,0.2)' },
+        mana: { id: 'mana', name: 'Mana', color: 'text-[#D952D9]', fillBg: 'rgba(217,82,217,0.2)' },
         gold: { id: 'gold', name: 'Gold', color: 'text-[#FFD700]', fillBg: 'rgba(255,215,0,0.2)' },
         blue: { id: 'blue', name: 'Blue', color: 'text-blue-200', fillBg: 'rgba(59,130,246,0.2)' },
         power: { id: 'power', name: 'Power', color: 'text-blue-500', fillBg: 'rgba(47,105,196,0.2)' },
@@ -2183,9 +2192,32 @@ const CHALLENGE_NODES = [
     { id: 'CGR07', type: 'upgrade', code: 'CGR07', name: 'constant boost thingy', coords: [45, 5], reqs: [[45,4]], borderColor: 'green', desc: 'boost grey by the uh.', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => 100*Math.pow(10,Math.floor(lvl/5))*(1+0.61*(lvl%5==1))*(1+1.71*(lvl%5==2))*(1+2.14*(lvl%5==3))*(1+5.28*(lvl%5==4&&lvl>=1)) }], costCurrency: 'gray', costFormula: (lvl) => 2e12*Math.pow(1.5*Math.pow(1.05, lvl), lvl), maxLevel: 25 },
     { id: 'CGR08', type: 'upgrade', code: 'CGR08', name: 'rand', coords: [44, 5], reqs: [[45,5]], borderColor: 'green', desc: 'boost grey randomly (linear), *1~(1+lvl).', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => 1+lvl*Math.random() }], costCurrency: 'gray', costFormula: (lvl) => 2e15*Math.pow(2, Math.pow(lvl,0.5)), maxLevel: 999 },
     { id: 'CGR09', type: 'upgrade', code: 'CGR09', name: 'random!', coords: [43, 5], reqs: [[44,5]], borderColor: 'green', desc: 'unlock yellow.', effects: [], costCurrency: 'gray', costFormula: (lvl) => 1e18, maxLevel: 1 },
-    { id: 'CY01', type: 'upgrade', code: 'CY01', name: 'yellow', coords: [43, 2], reqs: [[43,5]], borderColor: 'green', desc: 'generate yellow at a radnom rate 1/random()/s per tick, max rand is 1/10.', effects: [{ type: 'base_gain', currency: 'yellow', formula: (lvl) => 1/Math.max(Math.random()/((Math.pow(1+0.05*getLevel('CY14'), 3))*Math.pow(1.31,Math.pow(getLevel('CY08'), 0.5))*(1+9*(getLevel('CGL06')>=1)+Math.max(getLevel('CGL06')-1, 0))), 1/(10*Math.pow(1.08,getLevel('CY06'))*Math.pow(2, getLevel('CY04'))*Math.pow(1.25,Math.pow(getLevel('CY02'), 0.5)))) }], costCurrency: 'gray', costFormula: (lvl) => 0, maxLevel: 1 },
+    { id: 'CGR10', type: 'upgrade', code: 'CGR10', name: '[copy]', coords: [46, 4], reqs: [[46,2]], borderColor: 'green', desc: 'generate x1.25 grey per level, extra boost at the start per perchase.', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => (Math.pow(1.25,lvl))*(1+1.5*Math.pow(0.875,getTime('CGR05'))) }], costCurrency: 'gray', costFormula: (lvl) => 1e9*Math.pow(1.25*Math.pow(1.025, lvl), lvl), maxLevel: 40 },
+    { id: 'CGR11', type: 'upgrade', code: 'CGR11', name: 'grey grey', coords: [46, 3], reqs: [[46,4]], borderColor: 'green', desc: 'x3 grey per level.', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => Math.pow(3,lvl)}], costCurrency: 'gray', costFormula: (lvl) => 1e27*Math.pow(2.8*Math.pow(1.03, lvl), lvl), maxLevel: 25 },
+    { id: 'CGR12', type: 'upgrade', code: 'CGR12', name: 'different terms', coords: [46, 5], reqs: [[46,4]], borderColor: 'green', desc: '+1x grey per (level)^2.', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => 1+Math.pow(lvl,2)}], costCurrency: 'gray', costFormula: (lvl) => 1e28*Math.pow(10, Math.pow(lvl, 0.65)), maxLevel: 100 },
+    { id: 'CGR13', type: 'upgrade', code: 'CGR13', name: 'two increases', coords: [46, 6], reqs: [[46,5]], borderColor: 'green', desc: 'x1.01 grey per level, +0.01 to base per 10 levels', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => Math.pow(1.01+0.01*Math.floor(lvl/10), lvl)}, {type: 'display', currency: 'gray', formula: (lvl) => "x"+formatNum(1.01+0.01*Math.floor(lvl/10))+"/lvl"}], costCurrency: 'gray', costFormula: (lvl) => 1e40*Math.pow(1.1+0.025*Math.floor(lvl/10), lvl), maxLevel: 200 },
+    { id: 'CGR14', type: 'upgrade', code: 'CGR14', name: 'multiple interval increases', coords: [45, 6], reqs: [[46,6]], borderColor: 'green', desc: 'x2 grey on multiples of 2, 3, 5 [stack]', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => Math.pow(2,Math.floor(lvl/2)+Math.floor(lvl/3)+Math.floor(lvl/5))}], costCurrency: 'gray', costFormula: (lvl) => 2e45*Math.pow(3+0.01*lvl, lvl), maxLevel: 60 },
+    { id: 'CGR15', type: 'upgrade', code: 'CGR15', name: 'speed up', coords: [44, 6], reqs: [[45,6]], borderColor: 'green', desc: 'x1.5 grey per level', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => Math.pow(1.5, lvl)}], costCurrency: 'gray', costFormula: (lvl) => 1e65*Math.pow(100, lvl), maxLevel: 5 },
+    { id: 'CGR16', type: 'upgrade', code: 'CGR16', name: 'last colour plate', coords: [43, 6], reqs: [[44,6]], borderColor: 'green', desc: 'unlock the final colour plate on the right.', effects: [{ type: 'currency_mult', currency: 'gray', formula: (lvl) => Math.pow(1.5, lvl)}], costCurrency: 'gray', costFormula: (lvl) => 1e80, maxLevel: 1 },
+    
+    { id: 'CM01', type: 'upgrade', code: 'CM01', name: 'magenta', coords: [48, 3], reqs: [[43,6]], borderColor: 'green', desc: 'generate magenta.', effects: [{ type: 'base_gain', currency: 'magenta', formula: (lvl) => 1 }], costCurrency: 'gray', costFormula: (lvl) => 0, maxLevel: 1 },
+    { id: 'CM02', type: 'upgrade', code: 'CM02', name: 'magenta factor I', coords: [49, 3], reqs: [[48,3]], borderColor: 'green', desc: 'boost magenta by +20% additive per level.', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+0.2*lvl }], costCurrency: 'magenta', costFormula: (lvl) => 10*Math.pow(1.1,Math.pow(lvl, 0.8))-8, maxLevel: 49 },
+    { id: 'CM03', type: 'upgrade', code: 'CM03', name: 'magenta factor II', coords: [50, 3], reqs: [[49,3]], borderColor: 'green', desc: 'boost magenta by +20% additive per level.', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+0.2*lvl }], costCurrency: 'magenta', costFormula: (lvl) => 50*Math.pow(1.08,Math.pow(lvl, 0.75))-30, maxLevel: 49 },
+    { id: 'CM04', type: 'upgrade', code: 'CM04', name: 'mana', coords: [48, 4], reqs: [[48,3]], borderColor: 'green', desc: 'unlock and generate mana.', effects: [{ type: 'base_gain', currency: 'mana', formula: (lvl) => 0.1 }], costCurrency: 'magenta', costFormula: (lvl) => 500, maxLevel: 1 },
+    { id: 'CM05', type: 'upgrade', code: 'CM05', name: 'magenta factor III', coords: [51, 3], reqs: [[50,3]], borderColor: 'green', desc: 'boost magenta by +20% additive per level.', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+0.2*lvl }], costCurrency: 'magenta', costFormula: (lvl) => 10000*Math.pow(1.12,Math.pow(lvl, 0.85))-7500, maxLevel: 49 },
+    { id: 'CM06', type: 'upgrade', code: 'CM06', name: 'more mana', coords: [49, 4], reqs: [[48,4]], borderColor: 'green', desc: '+0.01 mana/s.', effects: [{ type: 'base_gain', currency: 'mana', formula: (lvl) => 0.01*lvl }], costCurrency: 'magenta', costFormula: (lvl) => 5000*Math.pow(1.08,Math.pow(lvl, 0.85))-4000, maxLevel: 40 },
+    { id: 'CM07', type: 'upgrade', code: 'CM07', name: 'mana mana', coords: [50, 4], reqs: [[49,4]], borderColor: 'green', desc: 'mana slightly boost itself. additional boost cap per level', effects: [{ type: 'currency_mult', currency: 'mana', formula: (lvl) => Math.min(1.5+0.05*lvl, Math.pow(getCurr('mana')/10+1,0.5)) }, {type: 'display', currency: 'mana', formula: (lvl)=>'max boost: '+formatNum(1.5+0.05*lvl)+' at '+formatNum((Math.pow(1.5+0.05*lvl, 2)-1)*10)+' mana'}], costCurrency: 'magenta', costFormula: (lvl) => 25000*Math.pow(1.2,Math.pow(lvl, 0.8))-(20000*(lvl>=1)), maxLevel: 40 },
+    { id: 'CM08', type: 'upgrade', code: 'CM08', name: 'do it more makes it better', coords: [51, 4], reqs: [[50,4]], borderColor: 'green', desc: 'boost mana based on first skill activations', effects: [{ type: 'currency_mult', currency: 'mana', formula: (lvl) => 1.2+0.075*Math.pow(Math.log2(getLevel('CMN01')/32+1),2.8) }], costCurrency: 'magenta', costFormula: (lvl) => 50000, maxLevel: 1 },
+    { id: 'CM09', type: 'upgrade', code: 'CM09', name: 'need some mana?', coords: [52, 4], reqs: [[51,4]], borderColor: 'green', desc: '+10 mana on perchase per level [given over 0.2s]. note the cost goes up', effects: [{ type: 'base_gain_raw', currency: 'mana', formula: (lvl) => 50*(getTime('CM09')<=0.2) }], costCurrency: 'magenta', costFormula: (lvl) => 10000*Math.pow(1.25,Math.pow(lvl, 0.75))-7500, maxLevel: 200 },
+    { id: 'CM10', type: 'upgrade', code: 'CM10', name: 'i mean... why not?', coords: [52, 3], reqs: [[52,4]], borderColor: 'green', desc: '+1% mana additive per level. note that this costs mana.', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+0.01*lvl }], costCurrency: 'mana', costFormula: (lvl) => (0.2+0.05*lvl)*Math.pow(1.2, Math.pow(Math.floor(lvl/10),0.7)), maxLevel: 400 },
+    
+    { id: 'CMN01', type: 'upgrade', code: 'CMN01', name: 'mana skill I', coords: [48, 2], reqs: [[48,4]], borderColor: 'green', desc: 'double magenta for 5s. cost increased based on all skills time since last activation, this basiclly goes for most mana skills', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+(1)*(getTime('CMN01')<=5) }, {type: 'display', currency: 'mana', formula: (lvl)=>'Time left: '+formatNum(Math.max(0, (5)-getTime('CMN01')))+'s'}, {type:'max_level_mod', target: 'CMN01', amount: (lvl) => lvl}], costCurrency: 'mana', costFormula: (lvl) => 2+(1*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN01'),0.65)))-1))+(2*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN02'),0.65)))-1))+(2*(Math.max(1, 8*Math.pow(0.8, Math.pow(getTime('CMN03'),0.68)))-1)), maxLevel: 1 },
+    { id: 'CMN02', type: 'upgrade', code: 'CMN02', name: 'mana skill II', coords: [49, 2], reqs: [[48,2]], borderColor: 'green', desc: '1.75x magenta for 15s.', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => 1+(1)*(getTime('CMN02')<=15) }, {type: 'display', currency: 'mana', formula: (lvl)=>'Time left: '+formatNum(Math.max(0, (15)-getTime('CMN02')))+'s'}, {type:'max_level_mod', target: 'CMN02', amount: (lvl) => lvl}], costCurrency: 'mana', costFormula: (lvl) => 10+(1*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN01'),0.65)))-1))+(2*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN02'),0.65)))-1))+(2.5*(Math.max(1, 8*Math.pow(0.8, Math.pow(getTime('CMN03'),0.68)))-1)), maxLevel: 1 },
+    { id: 'CMN03', type: 'upgrade', code: 'CMN03', name: 'mana skill III', coords: [50, 2], reqs: [[49,2]], borderColor: 'green', desc: '5x magenta [decays]', effects: [{ type: 'currency_mult', currency: 'magenta', formula: (lvl) => Math.max(1, 5*Math.pow(0.6, Math.pow(getTime('CMN03'), 0.7))) }, {type: 'display', currency: 'mana', formula: (lvl)=>'Effect time: '+formatNum(Math.max(0, getTime('CMN03')))+'s'}, {type:'max_level_mod', target: 'CMN03', amount: (lvl) => lvl}], costCurrency: 'mana', costFormula: (lvl) => 20+(1*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN01'),0.65)))-1))+(2*(Math.max(1, 5*Math.pow(0.8, Math.pow(getTime('CMN02'),0.65)))-1))+(3*(Math.max(1, 8*Math.pow(0.8, Math.pow(getTime('CMN03'),0.68)))-1)), maxLevel: 1 },
+    
+    { id: 'CY01', type: 'upgrade', code: 'CY01', name: 'yellow', coords: [43, 2], reqs: [[43,5]], borderColor: 'green', desc: 'generate yellow at a radnom rate 1/random()/s per tick, max rand is 1/10.', effects: [{ type: 'base_gain', currency: 'yellow', formula: (lvl) => 1/Math.max(Math.random()/((Math.pow(1+0.05*getLevel('CY14'), 3))*Math.pow(1.31,Math.pow(getLevel('CY08'), 0.5))*Math.pow(1+9*(getLevel('CGL06')>=1)+Math.max(getLevel('CGL06')-1, 0), 1+0.2*getLevel('CGL23'))), 1/(10*Math.pow(1.08,getLevel('CY06'))*Math.pow(2, getLevel('CY04'))*Math.pow(1.25,Math.pow(getLevel('CY02'), 0.5)))) }], costCurrency: 'gray', costFormula: (lvl) => 0, maxLevel: 1 },
     { id: 'CY02', type: 'upgrade', code: 'CY02', name: 'luck+', coords: [44, 2], reqs: [[43,2]], borderColor: 'green', desc: 'max luck is increased.', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '-> 1/'+formatNum(Math.pow(1.25,Math.pow(lvl, 0.5)))+' to min random()' }], costCurrency: 'yellow', costFormula: (lvl) => 20+30*Math.pow(1.5,Math.pow(lvl,0.7)), maxLevel: 250 },
-    { id: 'CY03', type: 'upgrade', code: 'CY03', name: 'doubler (already?)', coords: [43, 1], reqs: [[43,2]], borderColor: 'green', desc: 'double yellow per level. [softcap after 20]', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(2,lvl) }], costCurrency: 'yellow', costFormula: (lvl) => 100*Math.pow(2.4*Math.pow(1.0125,lvl),lvl)*Math.pow(2+Math.max(lvl-20,0),Math.max(lvl-20,0))/Math.pow(1e5,getLevel('CGL20')), maxLevel: 100 },
+    { id: 'CY03', type: 'upgrade', code: 'CY03', name: 'doubler (already?)', coords: [43, 1], reqs: [[43,2]], borderColor: 'green', desc: 'double yellow per level. [softcap after 20]', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(2+0.02*getLevel('CGL24'),lvl) }], costCurrency: 'yellow', costFormula: (lvl) => 100*Math.pow(2.4*Math.pow(1.0125,lvl),lvl)*Math.pow(2+Math.max(lvl-20,0),Math.max(lvl-20,0))/Math.pow(1e5,getLevel('CGL20')), maxLevel: 100 },
     { id: 'CY04', type: 'upgrade', code: 'CY04', name: 'big jumps now available', coords: [44, 1], reqs: [[44,2]], borderColor: 'green', desc: 'max luck is doubled per level.', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '-> 1/'+formatNum(Math.pow(2,lvl))+' to min random()' }], costCurrency: 'yellow', costFormula: (lvl) => 1000*Math.pow(50*Math.pow(2,Math.max(0,lvl-2)),lvl)*(1+1e32*(lvl>=2))*(1-0.9*(lvl>=3)), maxLevel: 2 },
     { id: 'CY05', type: 'upgrade', code: 'CY05', name: 'yellow or something', coords: [45, 1], reqs: [[44,1]], borderColor: 'green', desc: 'yellow boost that grows slowly based on perchase time!', effects: [{type: 'display', currency: 'yellow', formula: (lvl) => Math.floor(Math.pow(1.1, getLevel('CY09'))*getTime('CY05'))+'s'},{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => 1+(Math.pow(1+(lvl>=1)*Math.log10(1+5*(Math.pow(1.1, getLevel('CY09'))*getTime('CY05'))),3)-1)/55 }], costCurrency: 'yellow', costFormula: (lvl) => 5000*Math.pow(2,lvl), maxLevel: 1 },
     { id: 'CY06', type: 'upgrade', code: 'CY06', name: 'layer sacrifice+', coords: [45, 2], reqs: [[44,2]], borderColor: 'green', desc: 'max luck is increased. cost 10x more per level, and cost all', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '-> 1/'+formatNum(Math.pow(1.08,lvl))+' to min random()' }], costCurrency: 'yellow', costFormula: (lvl) => Math.max(10000*Math.pow(10,lvl)/(Math.pow(1+0.025*(getTime('CY01')*getLevel('CGL15')+50*(1-Math.pow(0.9,getTime('CY01')*getLevel('CGL15')))),5)), getCurr('yellow')), maxLevel: 150 },
@@ -2201,13 +2233,20 @@ const CHALLENGE_NODES = [
     { id: 'CY16', type: 'upgrade', code: 'CY16', name: 'go!', coords: [45, -2], reqs: [[44,-2]], borderColor: 'green', desc: 'uncap to CY02.', effects: [{ type: 'max_level_mod', target: 'CY02', amount: (lvl) => 1e9 }], costCurrency: 'yellow', costFormula: (lvl) => 1e45, maxLevel: 1 },
     { id: 'CY17', type: 'upgrade', code: 'CY17', name: 'i go fast now', coords: [46, 1], reqs: [[45,1]], borderColor: 'green', desc: 'yellow boost that grows based on perchase time, jump value! quicker per level after (note: buying a level resets time)', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(1.03, Math.floor(5*Math.log2(Math.pow(1.35,lvl)*Math.pow(1+0.2*lvl,3)*lvl*getTime('CY17')+2)))}], costCurrency: 'yellow', costFormula: (lvl) => 5e46*Math.pow(10,lvl), maxLevel: 25 },
     { id: 'CY18', type: 'upgrade', code: 'CY18', name: 'and i', coords: [46, 0], reqs: [[45,1]], borderColor: 'green', desc: 'x2.5 yellow per level / cost gets slightly cheaper based on last perchase time', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(2.5,lvl)},{type: 'max_level_mod', target: 'CY18', amount: (lvl) => lvl}], costCurrency: 'yellow', costFormula: (lvl) => 1e48*Math.pow(12*Math.pow(1.025,lvl),lvl)*Math.max(1e-40, 1/(1+(lvl>=1)*0.25*getTime('CY18'))), maxLevel: 1 },
+    { id: 'CY19', type: 'upgrade', code: 'CY19', name: 'quick', coords: [47, 1], reqs: [[44,0],[46,1]], borderColor: 'green', desc: 'yellow boost that grows really quick (softcap is 100000), later level make it grow faster', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.min(100000, 1+0.0001*Math.pow(Math.pow(lvl,2)*0.2*getTime('CY19'),5))*Math.pow(1+Math.pow(1.7,lvl)*0.1*getTime('CY19'), 0.15)+1}], costCurrency: 'yellow', costFormula: (lvl) => 1e95*Math.pow(100,lvl), maxLevel: 25 },
+    { id: 'CY20', type: 'upgrade', code: 'CY20', name: 'wrong order!', coords: [47, 0], reqs: [[47,1]], borderColor: 'green', desc: 'x1.5 topaz per level', effects: [{type: 'reset_gain_mult', targetCurrency: 'topaz', formula: (lvl) => Math.pow(1.5,lvl)}], costCurrency: 'yellow', costFormula: (lvl) => 1e105*Math.pow(lvl+3,lvl), maxLevel: 50 },
+    { id: 'CY21', type: 'upgrade', code: 'CY21', name: 'strange formula, nice answer', coords: [47, -1], reqs: [[47,0]], borderColor: 'green', desc: '+10% yellow per level', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => 1+0.1*lvl}], costCurrency: 'yellow', costFormula: (lvl) => 1e139*Math.pow(10, Math.floor(Math.log2(Math.max(lvl, 1)))), maxLevel: 16384 },
+    { id: 'CY22', type: 'upgrade', code: 'CY22', name: 'factor boosting', coords: [47, -2], reqs: [[47,-1]], borderColor: 'green', desc: 'x1.25 yellow per level, an additional x1.2 if multiple of 2, x1.3 if mult of 3, x1.5 if mult of 5', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => (lvl==0)+(lvl>=1)*Math.pow(1.25, lvl)*(1+0.2*(lvl%2==0))*(1+0.3*(lvl%3==0))*(1+0.5*(lvl%5==0))}], costCurrency: 'yellow', costFormula: (lvl) => 2e140*Math.pow(1.3+0.0125*lvl,lvl), maxLevel: 120 },
+    { id: 'CY23', type: 'upgrade', code: 'CY23', name: 'i like yellow', coords: [46, -2], reqs: [[47,-2]], borderColor: 'green', desc: 'x2^(sqrt(lvl)) yellow.', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(2, Math.pow(lvl, 0.5))}], costCurrency: 'yellow', costFormula: (lvl) => 1.63e163*Math.pow(2.5, Math.pow(lvl, 0.7)), maxLevel: 120 },
+    { id: 'CY24', type: 'upgrade', code: 'CY24', name: 'what is better than one random number?', coords: [47, 2], reqs: [[47,1]], borderColor: 'green', desc: 'two. 1/random() yellow per tick again, SQUARED, max 10000', effects: [{type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.min(1e4, Math.pow(1/(Math.random()+1e-308), 2))}], costCurrency: 'yellow', costFormula: (lvl) => 1e175*Math.pow(2.5, Math.pow(lvl, 0.7)), maxLevel: 1 },
+    { id: 'CY25', type: 'upgrade', code: 'CY25', name: 'end of random', coords: [46, 2], reqs: [[47,2]], borderColor: 'green', desc: 'finish yellow. unlock more grey upgrades, x1e5 grey', effects: [{type: 'currency_mult', currency: 'grey', formula: (lvl) => 1e5}], costCurrency: 'yellow', costFormula: (lvl) => 1e190, maxLevel: 1 },
     //golden
     { id: 'CGL01', type: 'reset',   code: 'CGL01', name: 'goldify your yellow!', coords: [42, 2], reqs: [[45,0]], desc: 'get topaz based on yellow. (gain increase start going up fast after 1B yellow)', targetCurrency: 'topaz', resetCurrencies: ['yellow'], resettedCoords: ['CY0','CY1','CY2','CY3','CY4','CY5','CY6','CY7','CY8','CY9'], calculateGain: (lvl, getCurr, getLvl) => { return Math.min(getCurr('yellow'),5e6)/5e6+Math.pow(getCurr('yellow')/1e8,0.3)*(1-1/(1+Math.pow(5, (getCurr('yellow')/1e8-10)))) } },
     { id: 'CGL02', type: 'upgrade', code: 'CGL02', name: 'tripler (already?)', coords: [42, 1], reqs: [[45,0]], borderColor: 'green', desc: 'triple yellow per level.', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(3,lvl) }], costCurrency: 'topaz', costFormula: (lvl) => 1*Math.pow(Math.min(10.5-5*Math.pow(0.8,lvl),10),lvl), maxLevel: 100 },
     { id: 'CGL03', type: 'upgrade', code: 'CGL03', name: 'recovery', coords: [41, 1], reqs: [[42,1]], borderColor: 'green', desc: 'get raw yellow when its below 100000.', effects: [{ type: 'base_gain_raw', currency: 'yellow', formula: (lvl) => Math.min(Math.max(1e5-getCurr('yellow'),0), (0.2+Math.max(getCurr('yellow'),0))*4.2*Math.pow(0.85,Math.log(getCurr('yellow')+1))) }], costCurrency: 'topaz', costFormula: (lvl) => 1*Math.pow(Math.min(10.5-5*Math.pow(0.8,lvl),10),lvl), maxLevel: 1 },
     { id: 'CGL04', type: 'upgrade', code: 'CGL04', name: 'yes', coords: [42, 0], reqs: [[42,1]], borderColor: 'green', desc: 'yellow boosts itself.', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(1+0.2*Math.log(getCurr('yellow')/25+10),2) }], costCurrency: 'topaz', costFormula: (lvl) => 1, maxLevel: 1 },
     { id: 'CGL05', type: 'upgrade', code: 'CGL05', name: 'extension pack', coords: [42, -1], reqs: [[42,0]], borderColor: 'green', desc: 'topaz boost yellow slightly, and get new yellow upgrades.', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.pow(1+0.2*Math.log(getCurr('topaz')/25+10),2) }], costCurrency: 'topaz', costFormula: (lvl) => 5, maxLevel: 1 },
-    { id: 'CGL06', type: 'upgrade', code: 'CGL06', name: 'lucky!', coords: [41, 0], reqs: [[42,0]], borderColor: 'green', desc: '10x luck. (+1 per level after)', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '-> x'+formatNum(10+Math.max(lvl-1, 0))+' luck' }], costCurrency: 'topaz', costFormula: (lvl) => 100*(lvl==0)+20*(lvl>=1)*(1+0.25*lvl)*Math.pow(1.125,lvl), maxLevel: 91 },
+    { id: 'CGL06', type: 'upgrade', code: 'CGL06', name: 'lucky!', coords: [41, 0], reqs: [[42,0]], borderColor: 'green', desc: '10x luck. (+1 per level after)', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '-> x'+formatNum(Math.pow(10+Math.max(lvl-1, 0), 1+0.2*getLevel('CGL23')))+' luck' }], costCurrency: 'topaz', costFormula: (lvl) => 100*(lvl==0)+20*(lvl>=1)*(1+0.25*lvl)*Math.pow(1.125,lvl), maxLevel: 91 },
     { id: 'CGL07', type: 'upgrade', code: 'CGL07', name: 'more room to fit the luck', coords: [41, -1], reqs: [[41,0]], borderColor: 'green', desc: 'more CY02 levels (250 on first level, 10 more per level after)', effects: [{ type: 'max_level_mod', target: 'CY02', amount: (lvl) => 250*(lvl>=1)+10*Math.max(lvl-1,0) }], costCurrency: 'topaz', costFormula: (lvl) => 1000000*(lvl==0)+20000*(lvl>=1)*(1+0.25*lvl)*Math.pow(1.05,lvl), maxLevel: 76 },
     { id: 'CGL08', type: 'upgrade', code: 'CGL08', name: 'start fast', coords: [41, -2], reqs: [[41,-1]], borderColor: 'green', desc: 'more yellow on the first 5s of every yellow run, decays until mult is 1 at 30s', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => Math.max(1,5*(1/(1+0.25*Math.max(getTime('CY01')-5,0)))) }], costCurrency: 'topaz', costFormula: (lvl) => 2500000, maxLevel: 1 },
     { id: 'CGL09', type: 'upgrade', code: 'CGL09', name: 'extension pack II', coords: [42, -2], reqs: [[41,-2]], borderColor: 'green', desc: 'yellow boost topaz slightly, and get new yellow upgrades.', effects: [{ type: 'reset_gain_mult', targetCurrency: 'topaz', formula: (lvl) => Math.pow(1+0.2*Math.log(getCurr('yellow')/1e30+10),2)+0.01*Math.log10(getCurr('yellow')+10) }], costCurrency: 'topaz', costFormula: (lvl) => 1e7, maxLevel: 1 },
@@ -2223,6 +2262,10 @@ const CHALLENGE_NODES = [
     { id: 'CGL19', type: 'upgrade', code: 'CGL19', name: 'good luck (literally)', coords: [40, 2], reqs: [[40,1]], borderColor: 'green', desc: '+20 CGL06 max level per level. (scale start at 15)', effects: [{ type: 'max_level_mod', target: 'CGL06', amount: (lvl) => 20*lvl }], costCurrency: 'topaz', costFormula: (lvl) => 1e21*(1+0.2*lvl)*Math.pow(1.125,lvl)*Math.pow(10, Math.max(0, lvl-14)), maxLevel: 45 },
     { id: 'CGL20', type: 'upgrade', code: 'CGL20', name: 'thats a lot (...?)', coords: [41, 2], reqs: [[40,2]], borderColor: 'green', desc: '/10000 CY03 cost per level', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '/'+formatNum(Math.pow(1e5,lvl))+' cost' }], costCurrency: 'topaz', costFormula: (lvl) => 8e22*Math.pow(10*Math.pow(1.05,lvl),lvl), maxLevel: 18 },
     { id: 'CGL21', type: 'upgrade', code: 'CGL21', name: 'extra upper limit', coords: [39, 2], reqs: [[40,2]], borderColor: 'green', desc: 'CY10s upper limit is now 10. it also goes faster', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => 'yes! its now 10' }], costCurrency: 'topaz', costFormula: (lvl) => 1e28, maxLevel: 1 },
+    { id: 'CGL22', type: 'upgrade', code: 'CGL22', name: 'hi', coords: [38, 2], reqs: [[39,2]], borderColor: 'green', desc: 'x100 yellow.', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => 100 }], costCurrency: 'topaz', costFormula: (lvl) => 3e29, maxLevel: 1 },
+    { id: 'CGL23', type: 'upgrade', code: 'CGL23', name: 'i heard you need more luck?', coords: [38, 1], reqs: [[38,2]], borderColor: 'green', desc: '+^0.2 to CGL06s effect per level.', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => '^'+formatNum(1+0.2*lvl)+' -> '+formatNum(1.2+0.2*lvl)+' to effect' }], costCurrency: 'topaz', costFormula: (lvl) =>2e35*Math.pow(3,lvl), maxLevel: 20 },
+    { id: 'CGL24', type: 'upgrade', code: 'CGL24', name: 'and you can get more per level.', coords: [38, 0], reqs: [[38,1]], borderColor: 'green', desc: '+0.02 to CY03s base per level.', effects: [{ type: 'display', currency: 'yellow', formula: (lvl) => 'base: '+formatNum(2+0.02*lvl)+' -> '+formatNum(2.02+0.02*lvl) }], costCurrency: 'topaz', costFormula: (lvl) => 1e48*Math.pow(Math.min(2+0.5*lvl, 8),lvl), maxLevel: 20 },
+    { id: 'CGL25', type: 'upgrade', code: 'CGL25', name: 'no not again!!!', coords: [38, -1], reqs: [[38,0]], borderColor: 'green', desc: 'anyways. x10000 yellow that grows over time.', effects: [{ type: 'currency_mult', currency: 'yellow', formula: (lvl) => 10000*Math.pow(1+Math.log2(1+getTime('CGL25')/5),2.5) }], costCurrency: 'topaz', costFormula: (lvl) => 1e67*Math.pow(Math.min(2+0.5*lvl, 8),lvl), maxLevel: 1 },
     
     
     { id: 'CC01', type: 'upgrade', code: 'CC01', name: 'cyan', coords: [43, 8], reqs: [[42,3]], borderColor: 'green', desc: 'generate cyan.', effects: [{ type: 'base_gain', currency: 'cyan', formula: (lvl) => 1 }], costCurrency: 'cyan', costFormula: (lvl) => 0, maxLevel: 1 },
@@ -2425,6 +2468,7 @@ const CHALLENGE_NODES = [
     { id: 'EX06', type: 'upgrade', code: 'EX06', name: 'the best', coords: [-6, 9], reqs: [[-5, 9],[4,11]], borderColor: 'orange', desc: 'Experience boost experinece, level boost level.', effects: [{ type: 'currency_mult', currency: 'XP', formula: (lvl,getLvl,getCurr) => 1+Math.pow(getCurr('XP'),0.12) },{ type: 'reset_gain_mult', targetCurrency: 'L', formula: (lvl,getLvl,getCurr) => Math.pow(getCurr('L'),0.15) }], costCurrency: 'L', costFormula: (lvl) => 50 * Math.pow(2, Math.pow(lvl,0.7)), maxLevel: 1 },
     { id: 'EX07', type: 'upgrade', code: 'EX07', name: 'finally.', coords: [-7, 9], reqs: [[-6, 9],[4,11]], borderColor: 'green', desc: '+1% of level on reset/s/level.', effects: [{ type: 'base_gain', currency: 'L', formula: (lvl,getLvl,getCurr) => 0.01*lvl*getResetGain('L') }], costCurrency: 'L', costFormula: (lvl) => 500 * Math.pow(2, Math.pow(lvl,0.75)), maxLevel: 100 },
     
+    
     //bonus
     { id: 'UnlockBonus', type: 'upgrade', code: 'Bonus', name: 'Bonus!!', coords: [0, -2], reqs: [], borderColor: 'green', desc: '+Unlock Bonus Basepate.', effects: [], costCurrency: 'P', costFormula: (lvl) => 100, maxLevel: 1 },
     { id: 'Info1', type: 'info', code: 'Extra', name: 'Bonus baseplate', coords: [0, -3], reqs: [[0, -2]], desc: 'Important.', getInfoText: () => `Note that this part of the game does not boost main progress!` },
@@ -2449,6 +2493,17 @@ const CHALLENGE_NODES = [
     { id: '+BU8', type: 'upgrade', code: '+B18', name: 'Plate VIII', coords: [0, -7], reqs: [[2, -6]], borderColor: 'green', desc: 'Unlock random. grind!', effects: [{ type: 'base_gain', currency: 'frogs', formula: (lvl) => 0.01 * lvl }], costCurrency: 'α', costFormula: (lvl) => 15000, maxLevel: 1 },
     { id: '+BU9', type: 'upgrade', code: '+B19', name: 'Plate IX', coords: [-1, -7], reqs: [[2, -6]], borderColor: 'green', desc: 'Unlock bits, a mega baseplate', effects: [{ type: 'base_gain', currency: 'bits', formula: (lvl) => 1 * lvl }], costCurrency: 'α', costFormula: (lvl) => 25000, maxLevel: 1 },
     { id: '+BU10', type: 'upgrade', code: '+B20', name: 'Plate X', coords: [-2, -7], reqs: [[2, -6]], borderColor: 'green', desc: 'Unlock day/night baseplate', effects: [{ type: 'base_gain', currency: 'clocktime', formula: (lvl) => 1 * lvl }], costCurrency: 'α', costFormula: (lvl) => 35000, maxLevel: 1 },
+    { id: '+BU11', type: 'upgrade', code: '+B21', name: 'Plate XI', coords: [-2, -3], reqs: [[2, -6]], borderColor: 'green', desc: 'Unlock a timewally baseplate', effects: [{ type: 'base_gain', currency: 'omega', formula: (lvl) => 1 * lvl }], costCurrency: 'α', costFormula: (lvl) => 1e25, maxLevel: 1 },
+    
+    //timewally
+    { id: 'BTW01', type: 'upgrade', code: 'BTW01', name: 'good luck...', coords: [8, -5], reqs: [[0, -2]], borderColor: 'green', desc: '+0.1Ω/s.', effects: [{ type: 'base_gain', currency: 'Ω', formula: (lvl) => 0.1*lvl }], costCurrency: 'Ω', costFormula: (lvl) => 0, maxLevel: 1 },
+    { id: 'BTW02', type: 'upgrade', code: 'BTW02', name: '[begin]', coords: [8, -6], reqs: [[8, -5]], borderColor: 'green', desc: '+0.01Ω/s/lvl.', effects: [{ type: 'base_gain', currency: 'Ω', formula: (lvl) => 0.01*lvl }], costCurrency: 'Ω', costFormula: (lvl) => 0.25*Math.pow(1.25,Math.pow(lvl,0.8)), maxLevel: 990 },
+    { id: 'BTW03', type: 'upgrade', code: 'BTW03', name: '[continue]', coords: [9, -6], reqs: [[8, -6]], borderColor: 'green', desc: '+10%Ω/s/lvl.', effects: [{ type: 'currency_mult', currency: 'Ω', formula: (lvl) => 1+0.1*lvl }], costCurrency: 'Ω', costFormula: (lvl) => 10*Math.pow(1.3,Math.pow(lvl,0.8)), maxLevel: 240 },
+    { id: 'BTW04', type: 'upgrade', code: 'BTW04', name: 'wait WHAT', coords: [8, -7], reqs: [[8, -6]], borderColor: 'green', desc: 'unlock a way to gain more omega (or lose them). you know what i mean ;)', effects: [{ type: 'display', currency: 'Ω', formula: (lvl) => "on your right"}], costCurrency: 'Ω', costFormula: (lvl) => 15, maxLevel: 1 },
+    { id: 'BTWGM', type: 'reset',   code: 'BTWGM', name: 'bet omega...', coords: [9, -7], reqs: [[8,-7]], desc: 'get/lose Ω', targetCurrency: 'Ω', resetCurrencies: ['Ω'], resettedCoords: [], calculateGain: (lvl, getCurr, getLvl) => { return 1e-308+(Math.random()<=0.01*(50-10*Math.pow(0.9,getLevel('BTW05'))))*((2-0.3*Math.pow(0.75,getLevel('BTW06'))))*getCurr('Ω') } },
+    { id: 'BTW05', type: 'upgrade', code: 'BTW05', name: 'win rate', coords: [10, -7], reqs: [[8, -7]], borderColor: 'green', desc: 'slightly improve BTWGMs win rate.', effects: [{ type: 'display', currency: 'Ω', formula: (lvl) => formatNum(50-10*Math.pow(0.9,lvl))+"% -> "+formatNum(50-10*Math.pow(0.9,lvl+1))+"%"}], costCurrency: 'Ω', costFormula: (lvl) => 25*Math.pow(2,lvl), maxLevel: 20 },
+    { id: 'BTW06', type: 'upgrade', code: 'BTW06', name: 'win reward', coords: [11, -7], reqs: [[10, -7]], borderColor: 'green', desc: 'slightly improve BTWGMs win reward.', effects: [{ type: 'display', currency: 'Ω', formula: (lvl) => formatNum(2-0.3*Math.pow(0.75,lvl))+"x -> "+formatNum(2-0.3*Math.pow(0.75,lvl+1))+"x"}], costCurrency: 'Ω', costFormula: (lvl) => 30*Math.pow(2,lvl), maxLevel: 20 },
+    { id: 'BTW07', type: 'upgrade', code: 'BTW07', name: 'omega~', coords: [10, -6], reqs: [[9, -6]], borderColor: 'green', desc: '+20%Ω/s/lvl.', effects: [{ type: 'currency_mult', currency: 'Ω', formula: (lvl) => 1+0.2*lvl }], costCurrency: 'Ω', costFormula: (lvl) => 250*Math.pow(1.4,Math.pow(lvl,0.825)), maxLevel: 990 },
     
     { id: 'BC01', type: 'upgrade', code: 'BC01', name: 'Chips', coords: [3, -13], reqs: [[2, -7]], borderColor: 'green', desc: '+0.01 clips/s/lvl.', effects: [{ type: 'base_gain', currency: 'chips', formula: (lvl) => 0.01 * lvl }], costCurrency: 'chips', costFormula: (lvl) => 0.05*Math.pow(1.25,lvl), maxLevel: 499 },
     { id: 'BC02', type: 'upgrade', code: 'BC02', name: 'Grind', coords: [4, -13], reqs: [[3, -13]], borderColor: 'orange', desc: 'x1.25 clips/s/lvl.', effects: [{ type: 'currency_mult', currency: 'chips', formula: (lvl) => Math.pow(1.25, lvl) }], costCurrency: 'chips', costFormula: (lvl) => 1*Math.pow(1.3,lvl), maxLevel: 500 },
@@ -3246,6 +3301,9 @@ function wrapText(text, maxWidth, fontSize) {
         }
 
         function drawNode(node, hovered) {
+            ctx.save();
+            const resetDisabled = gameState.paused && node.type === 'reset';
+            if (resetDisabled) ctx.globalAlpha = 0.55;
             const w = node.width || 1;
             const h = node.height || 1;
             const posX = node.coords[0] * NODE_GAP - (NODE_SIZE * w) / 2;
@@ -3269,7 +3327,7 @@ function wrapText(text, maxWidth, fontSize) {
                 progressPct = isMax ? 100 : Math.min(100, Math.max(0, (curr / cost) * 100));
             } else if (node.type === 'reset') {
                 const gain = getEffectiveResetGain(node);
-                canAfford = gain > 0;
+                canAfford = !resetDisabled && gain > 0;
                 progressPct = canAfford ? 100 : 0;
             }
             
@@ -3378,7 +3436,7 @@ if (gameState.showEffects) {
                 ctx.fillText(`+${formatNum(gain)} ${node.targetCurrency}`, posX + width / 2, bottomY - 8);
                 ctx.fillStyle = 'rgba(161,161,170,0.6)';
                 ctx.font = '8px "Fira Code", monospace';
-                ctx.fillText('RESET', posX + width / 2, bottomY + 2);
+                ctx.fillText(resetDisabled ? 'PAUSED' : 'RESET', posX + width / 2, bottomY + 2);
             
             } else {
                 const displayLvl = getDisplayLevel(node.id);
@@ -3415,6 +3473,7 @@ if (gameState.showEffects) {
                 ctx.font = '9px "Fira Code", monospace';
                 ctx.fillText(isMax ? 'MAX' : `${formatNum(cost)} ${node.costCurrency}`, posX + width - padding, bottomY);
             }
+            ctx.restore();
         }
 
         function drawDecorations() {
@@ -3424,8 +3483,9 @@ if (gameState.showEffects) {
             const centerY = vh / 2;
             
             for (const deco of DECORATIONS) {
-                const isUnlocked = gameState.unlockedDecorations.includes(DECORATIONS.indexOf(deco)) || checkDecoRequirements(deco.requirements);
-                if (!isUnlocked) continue;
+                // Unlocks are persisted by decoration content, not array position, so reordering
+                // or adding decorations cannot show the wrong plate or relock earned art.
+                if (!isDecorationUnlocked(deco)) continue;
                 
                 if (deco.type === 'line') {
                     const [[x1, y1], [x2, y2]] = deco.coords;
@@ -3702,7 +3762,24 @@ function draw() {
         }
         // ==================== DECORATION RENDERING ====================
 
-        function checkDecoRequirements(reqArray) { if (!reqArray || reqArray.length === 0) return true; return reqArray.every(id => getLevel(id) >= 1); }
+        function checkDecoRequirements(reqArray) {
+            if (!reqArray || reqArray.length === 0) return true;
+            return reqArray.every(requirement => {
+                // Resolve by node ID first; only accept a displayed code when it identifies one node.
+                const byId = NODE_MAP.get(requirement);
+                const codeMatches = byId ? [] : TREE_NODES.filter(node => node.code === requirement);
+                const node = byId || (codeMatches.length === 1 ? codeMatches[0] : null);
+                return !!node && node.type === 'upgrade' && getLevel(node.id) >= 1;
+            });
+        }
+
+        function getDecorationKey(deco) {
+            return JSON.stringify(deco);
+        }
+
+        function isDecorationUnlocked(deco) {
+            return (gameState.unlockedDecorationKeys || []).includes(getDecorationKey(deco));
+        }
 
         // ==================== GAME LOGIC ====================
         let _currencyRateCache = {};
@@ -4103,11 +4180,23 @@ function addCurrencyToOrder(currKey) {
 }
 
         function renderDecorationsUnlock() {
-            DECORATIONS.forEach((deco, idx) => {
+            if (!Array.isArray(gameState.unlockedDecorationKeys)) gameState.unlockedDecorationKeys = [];
+            const unlockedKeys = new Set(gameState.unlockedDecorationKeys);
+
+            // This is called after loading and once per second. Add eligible art permanently;
+            // resets or later decoration edits must not make previously earned plates disappear.
+            for (const deco of DECORATIONS) {
                 if (checkDecoRequirements(deco.requirements)) {
-                    if (!gameState.unlockedDecorations.includes(idx)) gameState.unlockedDecorations.push(idx);
+                    unlockedKeys.add(getDecorationKey(deco));
                 }
-            });
+            }
+
+            gameState.unlockedDecorationKeys = [...unlockedKeys];
+            // Maintain the old index-based field for compatibility, but never use it to draw.
+            gameState.unlockedDecorations = DECORATIONS.reduce((indices, deco, idx) => {
+                if (unlockedKeys.has(getDecorationKey(deco))) indices.push(idx);
+                return indices;
+            }, []);
         }
         // ==================== UI RENDERING ====================
         const currencyBarCache = new Map();
@@ -4363,6 +4452,7 @@ function renderCurrencyBar() {
         let activeResetNode = null;
 
         function openResetModal(node) {
+            if (gameState.paused) return;
             if (gameState.skipResetConfirm && gameState.skipResetConfirm[node.id]) { executeReset(node); return; }
             activeResetNode = node;
             document.getElementById('reset-modal-title').textContent = `EXECUTE ${node.name}`;
@@ -4379,7 +4469,11 @@ function renderCurrencyBar() {
 
         function executeReset(node) {
     try {
-    if (!node) return;
+    if (!node || gameState.paused) {
+        document.getElementById('reset-modal').classList.add('hidden');
+        activeResetNode = null;
+        return;
+    }
     const gain = getEffectiveResetGain(node);
     if (gain <= 0) { playSound('fail');
         document.getElementById('reset-modal').classList.add('hidden'); return; }
@@ -4431,8 +4525,13 @@ document.getElementById('btn-scroll-lock').onclick = () => {
     playSound('buy');
     saveCurrencyBarScrollState();
 };
-document.getElementById('btn-pause').onclick = () => {
+        document.getElementById('btn-pause').onclick = () => {
             gameState.paused = !gameState.paused;
+            if (gameState.paused) {
+                document.getElementById('reset-modal').classList.add('hidden');
+                activeResetNode = null;
+            }
+            requestCanvasRedraw(true);
             const icon = document.getElementById('pause-icon'),
                 label = document.getElementById('pause-label');
             if (gameState.paused) { icon.setAttribute('data-lucide', 'play');
@@ -4958,7 +5057,7 @@ document.getElementById('btn-font-up').onclick = (e) => {
                     const node = getNodeAtScreen(e.clientX, e.clientY);
                     if (node) {
                         if (node.type === 'upgrade') buyUpgrade(node.id);
-                        else if (node.type === 'reset') openResetModal(node);
+                        else if (node.type === 'reset' && !gameState.paused) openResetModal(node);
                         else if (node.type === 'challenge') {
                             // If we're already in this challenge, leave it
                             if (gameState.activeChallenge === node.id) {
@@ -4999,7 +5098,7 @@ document.getElementById('btn-font-up').onclick = (e) => {
                 const node = getNodeAtScreen(e.clientX, e.clientY);
                 if (node) {
                     if (node.type === 'upgrade') buyUpgrade(node.id);
-                    else if (node.type === 'reset') openResetModal(node);
+                    else if (node.type === 'reset' && !gameState.paused) openResetModal(node);
                     else if (node.type === 'challenge') {
                         if (gameState.activeChallenge === node.id) leaveChallenge(false);
                         else if (gameState.activeChallenge) {
@@ -5107,7 +5206,7 @@ document.getElementById('btn-font-up').onclick = (e) => {
                 const node = getNodeAtScreen(touch.clientX, touch.clientY);
                 if (node) {
                     if (node.type === 'upgrade') buyUpgrade(node.id);
-                    else if (node.type === 'reset') openResetModal(node);
+                    else if (node.type === 'reset' && !gameState.paused) openResetModal(node);
                     else if (node.type === 'challenge') {
                         if (gameState.activeChallenge === node.id) leaveChallenge(false);
                         else if (gameState.activeChallenge) {
@@ -6124,12 +6223,23 @@ window.updateNewsMessageCount = updateNewsMessageCount;
         let gameTickAccumulator = 0;
         let lastCurrencyUpdateTime = 0;
         let lastCanvasUpdateTime = 0;
+        let lastDecorationCheckTime = 0;
+        let lastNonzeroCurrencyCheckTime = -1000;
         let canvasFrameCounter = 0;
         let lastCanvasSnapshot = '';
         let _lastNewsThrottleFrame = 0;
 
         function gameLoop(timestamp) {
     try {
+    if (timestamp - lastNonzeroCurrencyCheckTime >= 1000) {
+        lastNonzeroCurrencyCheckTime = timestamp;
+        for (const key of Object.keys(CURRENCIES)) {
+            const amount = gameState.currencies[key];
+            if (typeof amount === 'number' && !Number.isNaN(amount) && amount !== 0) {
+                addCurrencyToOrder(key);
+            }
+        }
+    }
     const dt = Math.min(50, timestamp - lastTime);
     lastTime = timestamp;
     gameTickAccumulator += dt;
@@ -6170,6 +6280,12 @@ window.updateNewsMessageCount = updateNewsMessageCount;
             try {
             const dt = dtMs / 1000;
             if (gameState.paused) return;
+            // Re-check decoration requirements at least once per second.
+            const now = performance.now();
+            if (now - lastDecorationCheckTime >= 1000) {
+                renderDecorationsUnlock();
+                lastDecorationCheckTime = now;
+            }
             // Clear frame-level caches every tick
             clearTickCaches();
             let changed = false;
