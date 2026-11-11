@@ -447,7 +447,7 @@ window.__I18N_RULES__ = [
      *   "Time: Day, +1, +0"  "+5% chance per tick up to 10"  "12 seconds -> /5"  "3s left"
      * 因为是拼接产物，固定词条对不上，只能在这里逐段替换。必须放在规则表最后，避免抢先命中。 */
     [
-        /(seconds|% chance|void consumed|max power|max customers|max stars|s left|luck|cost| raw|AUTO|Time: (?:Day|Dusk|Night|Dawn)|another -|apology accepted|never forgive|yay!|get: |\(WIP\)|<- new content|to min random|to V77s boost|Go outside|Open a weather forecast|->|\d+s\b|\/lvl\b)/,
+        /(seconds|% chance|void consumed|max power|max customers|max stars|max boost|Time left|Effect time|s left|luck|cost| raw|AUTO|Time: (?:Day|Dusk|Night|Dawn)|another -|apology accepted|never forgive|yay!|get: |\(WIP\)|<- new content|to min random|to V77s boost|Go outside|Open a weather forecast|->|\d+s\b|\/lvl\b)/,
         function (m) {
             return m.input
                 .replace(/^Time: (Day|Dusk|Night|Dawn)/, function (x, k) {
@@ -463,6 +463,15 @@ window.__I18N_RULES__ = [
                 .replace(/([\d.,]+[A-Za-z]?) seconds -> \//, '$1 秒 → /')
                 .replace(/([\d.,]+[A-Za-z]?) seconds/, '$1 秒')
                 .replace(/([\d.,]+[A-Za-z]?)s left/, '剩余 $1 秒')
+                // CM07：「max boost: 3.5 at 112.5 mana」→「最大增幅：3.5（需 112.5 法力）」
+                .replace(/max boost: ([\d.,A-Za-z]+) at ([\d.,A-Za-z]+) ([A-Za-z][A-Za-z0-9_]{2,})/, function (x, cap, need, id) {
+                    var C = window.__I18N_CURRENCY__ || {};
+                    var cn = C[String(id).toLowerCase()] || id;
+                    return '最大增幅：' + cap + '（需 ' + need + ' ' + cn + '）';
+                })
+                // CMN01/02：「Time left: 4.37s」；CMN03：「Effect time: 0.034s」
+                .replace(/Time left: /g, '剩余时间：')
+                .replace(/Effect time: /g, '效果时长：')
                 .replace(/([+\-]?[\d.,]+[A-Za-z]?) max stars/, '最多 $1 星')
                 // 「+200 max power / x1.5 max customers」：小写 max 表示「上限」，货币词交给 remapCurrencyWords 补中文
                 .replace(/([+\-x]?[\d.,]+[A-Za-z]?) max (power|customers)\b/g, '$1 $2上限')
@@ -491,7 +500,7 @@ window.__I18N_RULES__ = [
                 .replace(/yay!/, '耶！')
                 .replace(/^get: /, '获得：')
                 .replace(/\(WIP\)/, '（开发中）')
-                .replace(/([\d.,]+)s\b/g, '$1 秒')      // 兜底："30s" → "30 秒"，前面的专有片段已先处理
+                .replace(/([\d.,]+(?:[KMBTQ]|Qa|Qi|Sx|Sp|Oc|No|Dc)?)s\b/g, '$1 秒')      // 兜底："30s" / "1.00Ts" → "30 秒"，前面的专有片段已先处理
                 .replace(/, /g, '，');                  // 拼接用的半角逗号统一成全角
         }
     ],
