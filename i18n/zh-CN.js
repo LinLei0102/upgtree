@@ -14,7 +14,7 @@ window.__I18N_DICTS__ = window.__I18N_DICTS__ || {};
 window.__I18N_DICTS__['zh-CN'] = {
 
     /* ================= 页面 / 标题 ================= */
-    "Upgrade Land": "升级大陆",
+    "Upgrade Land": "递升之地",
 
     /* ================= 左下 HUD ================= */
     "SFX: ON": "音效：开",
@@ -98,7 +98,7 @@ window.__I18N_DICTS__['zh-CN'] = {
     "WIPE EVERYTHING": "全部清除",
 
     /* ================= 首次进入 ================= */
-    "Welcome to upgrade land!": "欢迎来到升级大陆！",
+    "Welcome to upgrade land!": "欢迎来到递升之地！",
     "Before you begin, what name shall you go by?": "开始之前，你想用什么昵称？",
     "This will be used for offline progress greetings and discord notifs.": "该昵称会用于离线收益问候和 Discord 通知。",
     "Name must be 2–28 characters.": "昵称需为 2–28 个字符。",
@@ -468,6 +468,10 @@ window.__I18N_RULES__ = [
                 .replace(/([+\-x]?[\d.,]+[A-Za-z]?) max (power|customers)\b/g, '$1 $2上限')
                 .replace(/([\d.,]+[A-Za-z]?) luck/, '$1 运气')
                 .replace(/([\d.,]+[A-Za-z]?) cost/, '$1 成本')
+                // CGL23/CGL24 的摘要：「^1.2 -> 1.4 to effect」「base: 2 -> 2.02」
+                // 必须在下面把 -> 换成 → 之前处理
+                .replace(/^(\S+) -> (\S+) to effect$/, '效果 $1 → $2')
+                .replace(/^base: (\S+) -> (\S+)$/, '基础值：$1 → $2')
                 .replace(/->/g, '→')
                 .replace(/\/lvl\b/g, '/级')
                 .replace(/ to min random\(\)/, ' 至随机下限')

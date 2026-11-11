@@ -1,4 +1,4 @@
-# Upgrade Land（升级大陆）— 简体中文汉化版
+# Upgrade Land（递升之地）— 简体中文汉化版
 
 [Upgrade Land](https://andyyim175.github.io/upgtree) 的中文汉化版 —— 一款基于坐标的大型放置升级树游戏。
 
@@ -38,7 +38,7 @@ bash sync-upstream.sh      # 同步上游 + 重建 + 报缺译
 index.html        上游原版（永不修改，git pull 只更新它）
 zh.html           发布版（CDN），提交入库
 zh-offline.html   本地版（vendor），已 gitignore
-i18n/             翻译引擎 + 词典 + 15 个分片词条 + 术语表
+i18n/             翻译引擎 + 词典 + 16 个分片词条 + 术语表
 tools/            构建 / 提取 / 漏译扫描脚本
 userscript/       时间倍速 + 自动购买油猴脚本
 .github/          GitHub Pages 自动部署工作流
